@@ -18,7 +18,9 @@
   };
   const PREVIEW_STAGE={OAC:'Apoyo',PC:'Precampaña',CA:'Campaña',PE:'Jornada y cómputos',JUR:'Resolución'};
   let DATA, dataDigest='', entities = new Map(), months = [], events = [], intervals = [], rules = [];
-  let state = {month:'2026-11',entity:'',office:'',stage:'',annexFilter:'',query:'',annex:true,legalDates:true,view:'calendario',format:'grid',all:false,date:'',mapAll:true};
+  let state = {month:'2026-11',entity:'',entities:[],office:'',stage:'',annexFilter:'',query:'',annex:true,legalDates:true,view:'calendario',format:'grid',all:false,date:'',mapAll:true};
+  const entityCodes=()=>state.entities.length?state.entities:(state.entity?[state.entity]:[]);
+  const chooseEntities=values=>{const codes=values.length===entities.size?[]:values;state.entities=codes.length>1?[...new Set(codes)].sort():[];state.entity=codes.length===1?codes[0]:'';};
   let dialogOpener = null, mapLoaded = false, toastTimer;
   const captureRegistry=new Map(),captureCache=new Map();let captureOpener=null,captureZoom=1;
   let exportOpener=null;let exportObjectURLs=[];let exportRevision=0;
@@ -104,7 +106,7 @@
     const base=clean([record.kind,record.label,record.rule,record.condition,record.trigger,eventContext(record)].join(' '));
     const scopes=(record.scopes||[]).filter(s=>{
       if(!state.legalDates&&!hasINEDate(record,s))return false;
-      if(state.entity&&s.entity_code!==state.entity)return false;
+      if(entityCodes().length&&!entityCodes().includes(s.entity_code))return false;
       if(state.office&&!officeMatches(s.office,state.office))return false;
       const haystack=base+' '+clean([s.entity,s.office,s.election_scope,...(s.qualifications||[]).map(q=>q.literal)].join(' '));
       return terms.every(t=>haystack.includes(t));
@@ -225,21 +227,22 @@
     }).join('');
   }
   function renderFilters() {
-    $('stateFilter').value=state.entity;$('officeFilter').value=state.office;$('stageFilter').value=state.stage;$('annexFilter').value=state.annexFilter;$('searchInput').value=state.query;$('annexToggle').checked=state.annex;
+    $('stateFilter').value=state.entities.length?'multiple':state.entity;$('stateFilter').querySelector('[value="multiple"]').textContent=state.entities.length?`${state.entities.filter(c=>c!=='FED').length} entidades${state.entities.includes('FED')?' y ámbito federal':''}`:'Seleccionar varias entidades…';$('officeFilter').value=state.office;$('stageFilter').value=state.stage;$('annexFilter').value=state.annexFilter;$('searchInput').value=state.query;$('annexToggle').checked=state.annex;
     $('legalDatesToggle').checked=state.legalDates;
     const chips=[];
     if(!state.legalDates)chips.push(['legalDates','Sólo calendarios del INE']);
+    if(state.entities.length)chips.push(['entities',entityCodes().map(c=>entities.get(c)?.name||c).join(', ')]);
     if(state.entity)chips.push(['entity',entities.get(state.entity)?.name||state.entity]);
     if(state.office)chips.push(['office',state.office]);if(state.stage)chips.push(['stage',STAGES[state.stage]?.full||state.stage]);
     if(state.query)chips.push(['query',`“${state.query}”`]);
     if(state.annexFilter)chips.push(['annexFilter',{'1':'Anexo 1 · Apoyo','2':'Anexo 2 · Precampaña','3':'Anexo 3 · Campaña','otras':'Otras fuentes'}[state.annexFilter]]);
-    $('activeFilters').innerHTML=chips.map(([key,label])=>`<span class="filter-chip">${escapeHTML(label)}<button data-clear="${key}" type="button" aria-label="Quitar filtro ${escapeHTML(label)}">×</button></span>`).join('');
+    $('activeFilters').innerHTML=chips.map(([key,label])=>`<span class="filter-chip"><span>${escapeHTML(label)}</span><button data-clear="${key}" type="button" aria-label="Quitar filtro ${escapeHTML(label)}">×</button></span>`).join('');
     [...$('stageFilter').options].forEach(o=>{if(o.value==='OAC')o.hidden=!state.annex;});
     ['PDF','DOCX','ODT'].forEach(format=>{
       const link=$('download'+format);
       link.setAttribute('aria-label',`Descargar calendario ${format} ${state.annex?'con':'sin'} anexo 1`);
     });
-    window.calendarDownloadState={selection:{entity:state.entity,office:state.office,stage:state.stage,annexFilter:state.annexFilter,query:state.query,annex:state.annex,legalDates:state.legalDates,month:state.month},dataSha256:dataDigest,monthLabel:monthName(state.month)};
+    window.calendarDownloadState={selection:{entity:state.entity,entities:[...state.entities],office:state.office,stage:state.stage,annexFilter:state.annexFilter,query:state.query,annex:state.annex,legalDates:state.legalDates,month:state.month},dataSha256:dataDigest,monthLabel:monthName(state.month),availableMonths:months.map(value=>({value,label:monthName(value)})),entityNames:entityCodes().map(c=>entities.get(c)?.name||c),officeLabel:state.office,stageLabel:STAGES[state.stage]?.name||'',sourceLabel:state.annexFilter?$('annexFilter').selectedOptions[0]?.textContent:''};
     dispatchEvent(new CustomEvent('calendar:selection',{detail:window.calendarDownloadState}));
   }
   function renderLegal() {
@@ -274,11 +277,11 @@
   function showMapTooltip(e,x,y) {$('mapTooltip').innerHTML=`<strong>${escapeHTML(e.name)}</strong>${escapeHTML((e.offices||[]).join(' · '))}`;$('mapTooltip').hidden=false;positionMapTooltip(x,y);}
   function positionMapTooltip(x,y) {const el=$('mapTooltip');el.style.left=Math.max(8,Math.min(x+12,innerWidth-el.offsetWidth-8))+'px';el.style.top=Math.max(8,Math.min(y+12,innerHeight-el.offsetHeight-8))+'px';}
   function hideMapTooltip() {$('mapTooltip').hidden=true;}
-  function updateMapSelection() {$('mexicoMap').querySelectorAll('[data-entity-code]').forEach(p=>{p.classList.toggle('selected',p.dataset.entityCode===state.entity);p.setAttribute('aria-pressed',String(p.dataset.entityCode===state.entity));});$('federalMap').classList.toggle('selected',state.entity==='FED');}
-  function selectEntity(code) {state.entity=code;state.mapAll=true;state.date='';writeRoute();render();hideMapTooltip();if(innerWidth<768)$('territoryPanel').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}
+  function updateMapSelection() {$('mexicoMap').querySelectorAll('[data-entity-code]').forEach(p=>{p.classList.toggle('selected',entityCodes().includes(p.dataset.entityCode));p.setAttribute('aria-pressed',String(entityCodes().includes(p.dataset.entityCode)));});$('federalMap').classList.toggle('selected',state.entity==='FED');}
+  function selectEntity(code) {chooseEntities([code]);state.mapAll=true;state.date='';writeRoute();render();hideMapTooltip();if(innerWidth<768)$('territoryPanel').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}
   function renderTerritory() {
     updateMapSelection();const entity=entities.get(state.entity);
-    if(!entity){$('territoryPanel').innerHTML=`<div class="territory-heading"><h3>Entidades y ámbito federal</h3></div><div class="territory-states">${[...entities.values()].map(e=>`<button class="state-choice" type="button" data-entity="${escapeHTML(e.code)}" style="--map-color:${e.code==='FED'?'var(--wine)':mapCategory(e)}"><span class="state-dot" aria-hidden="true"></span>${escapeHTML(e.name)}${icon('flecha')}</button>`).join('')}</div>`;return;}
+    if(!entity){$('territoryPanel').innerHTML=`<div class="territory-heading"><h3>Entidades y ámbito federal</h3></div><div class="territory-states">${[...entities.values()].filter(e=>!state.entities.length||state.entities.includes(e.code)).map(e=>`<button class="state-choice" type="button" data-entity="${escapeHTML(e.code)}" style="--map-color:${e.code==='FED'?'var(--wine)':mapCategory(e)}"><span class="state-dot" aria-hidden="true"></span>${escapeHTML(e.name)}${icon('flecha')}</button>`).join('')}</div>`;return;}
     const list=filteredEvents(state.mapAll);const ints=filteredIntervals(state.mapAll?null:state.month);
     $('territoryPanel').innerHTML=`<div class="territory-heading"><p class="eyebrow">${state.entity==='FED'?'Elección federal':'Elecciones locales'}</p><h3>${escapeHTML(entity.name)}</h3><div class="office-tags">${(entity.offices||[]).map(o=>`<span class="office-tag">${escapeHTML(o)}</span>`).join('')}</div></div><div class="territory-controls"><span>${list.length} actuaciones${state.mapAll?' en 14 meses':' en '+escapeHTML(monthName(state.month))}</span><label><input type="checkbox" id="mapAllDates" ${state.mapAll?'checked':''}>Todos los meses</label></div>${agendaHTML(list,true)}${ints.length?`<section class="interval-section"><h3>Periodos sin día individualizado</h3>${ints.map(intervalCard).join('')}</section>`:''}`;
   }
@@ -286,7 +289,7 @@
     const raw=location.hash.slice(1);if(!raw||!raw.includes('='))return;
     const p=new URLSearchParams(raw);
     state.month=months.includes(p.get('mes'))?p.get('mes'):months[0];
-    state.entity=entities.has(p.get('entidad'))?p.get('entidad'):'';
+    chooseEntities(unique((p.get('entidades')||p.get('entidad')||'').split(',')).filter(c=>entities.has(c)));
     state.office=p.get('cargo')||'';state.stage=STAGES[p.get('etapa')]?p.get('etapa'):'';
     state.query=p.get('buscar')||'';state.annex=p.get('anexo')!=='sin';
     state.legalDates=p.get('adicionales')!=='sin';
@@ -298,7 +301,7 @@
   }
   function writeRoute(push=false) {
     const p=new URLSearchParams({mes:state.month,vista:state.view,anexo:state.annex?'con':'sin'});
-    if(state.entity)p.set('entidad',state.entity);if(state.office)p.set('cargo',state.office);if(state.stage)p.set('etapa',state.stage);if(state.query)p.set('buscar',state.query);if(state.format!=='grid')p.set('formato',state.format);if(state.all)p.set('todo','1');if(state.date)p.set('fecha',state.date);
+    if(state.entities.length)p.set('entidades',state.entities.join(','));else if(state.entity)p.set('entidad',state.entity);if(state.office)p.set('cargo',state.office);if(state.stage)p.set('etapa',state.stage);if(state.query)p.set('buscar',state.query);if(state.format!=='grid')p.set('formato',state.format);if(state.all)p.set('todo','1');if(state.date)p.set('fecha',state.date);
     if(state.annexFilter)p.set('fuente',state.annexFilter);
     if(!state.legalDates)p.set('adicionales','sin');
     history[push?'pushState':'replaceState'](null,'','#'+p.toString());
@@ -354,7 +357,7 @@
     exportOpener=document.activeElement;
     $('exportLegalDates').checked=state.legalDates;
     const entityValues=[...entities.values()].filter(e=>e.code!=='FED').sort((a,b)=>collator.compare(a.name,b.name));entityValues.push(entities.get('FED'));
-    exportOptions('exportEntities',entityValues.map(e=>[e.code,e.name]),new Set(state.entity?[state.entity]:entityValues.map(e=>e.code)));
+    exportOptions('exportEntities',entityValues.map(e=>[e.code,e.name]),new Set(entityCodes().length?entityCodes():entityValues.map(e=>e.code)));
     exportOptions('exportStages',Object.entries(STAGES).map(([key,v])=>[key,v.full]),new Set(state.stage?[state.stage]:Object.keys(STAGES).filter(s=>state.annex||s!=='OAC')));
     const annexes=[['1','Anexo 1 · Apoyo de la ciudadanía'],['2','Anexo 2 · Precampaña'],['3','Anexo 3 · Campaña'],['otras','Otras fuentes · Jornada, cómputos, asignación e impugnaciones']];
     exportOptions('exportAnnexes',annexes,new Set(state.annexFilter?[state.annexFilter]:annexes.map(v=>v[0]).filter(a=>state.annex||a!=='1')));
@@ -406,7 +409,7 @@
         current.text+=eventText;current.bytes+=eventBytes;current.count++;current.dates.add(e.date);
       }
       if(current.count)parts.push({...current,text:current.text+footer});
-      if(revision!==exportRevision)return;clearExportDownloads();const files=parts.map((part,index)=>{const blob=new Blob([part.text],{type:'text/calendar;charset=utf-8'});const url=URL.createObjectURL(blob);exportObjectURLs.push(url);return {url,name:parts.length===1?'Calendario_electoral_2026_2027.ics':`Calendario_electoral_2026_2027_parte_${index+1}_de_${parts.length}.ics`,count:part.count,dates:part.dates.size,bytes:blob.size};});
+      if(revision!==exportRevision)return;clearExportDownloads();const files=parts.map((part,index)=>{const blob=new Blob([part.text],{type:'text/calendar;charset=utf-8'});const url=URL.createObjectURL(blob);exportObjectURLs.push(url);return {url,name:calendarFilename({entities:exportValues('entities').length===entities.size?[]:exportValues('entities'),period:$('exportForm').querySelector('[name="exportPeriod"]:checked')?.value||'all',month:state.month,annex:exportValues('annexes').includes('1'),legalDates:$('exportLegalDates').checked},'ics').replace(/\.ics$/,parts.length>1?`_parte_${index+1}_de_${parts.length}.ics`:'.ics'),count:part.count,dates:part.dates.size,bytes:blob.size};});
       if(files.length===1){const a=document.createElement('a');a.href=files[0].url;a.download=files[0].name;document.body.append(a);a.click();a.remove();}
       $('exportDownloads').hidden=false;$('exportDownloads').innerHTML=`<h3>${files.length===1?'Archivo preparado':files.length+' partes preparadas'}</h3><p>Importa ${files.length===1?'el archivo':'todas las partes en el mismo calendario'}. Las partes mantienen todas las entradas y sus fuentes.</p>${files.length>1?'<p>Google Calendar admite archivos de hasta 1 MB; cada parte es menor a ese límite. <a href="https://support.google.com/calendar/answer/45654?hl=es" target="_blank" rel="noopener noreferrer">Ayuda de Google Calendar</a></p>':''}<div class="export-part-links">${files.map((file,i)=>`<a class="export-part" href="${file.url}" download="${escapeHTML(file.name)}"><strong>Descargar ${files.length===1?'archivo':'parte '+(i+1)+' de '+files.length}</strong><span>${file.count.toLocaleString('es-MX')} ${file.count===1?'entrada':'entradas'} · ${file.dates} ${file.dates===1?'fecha':'fechas'} · ${Math.ceil(file.bytes/1000)} kB</span></a>`).join('')}</div>`;
       if(files.length>1)$('exportDownloads').scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});showToast(`${selection.length.toLocaleString('es-MX')} ${selection.length===1?'entrada':'entradas'} en ${files.length} ${files.length===1?'archivo':'partes'}.`);
@@ -416,7 +419,7 @@
     if(opener)dialogOpener=opener;state.date=date;if(push)writeRoute(true);
     const list=filteredEvents(true).filter(e=>e.date===date),groups=dayEntities(list),localCount=groups.filter(g=>g.code!=='FED').length;
     const scope=[localCount?`${localCount} ${localCount===1?'entidad':'entidades'}`:'',groups.some(g=>g.code==='FED')?'ámbito federal':''].filter(Boolean).join(' y ');
-    $('dialogTitle').textContent=fullDate(date);$('dialogSummary').textContent=`${list.length} ${list.length===1?'actuación':'actuaciones'}${scope?' · '+scope:''}${state.entity||state.office||state.stage||state.annexFilter||state.query?' con los filtros aplicados':''}`;
+    $('dialogTitle').textContent=fullDate(date);$('dialogSummary').textContent=`${list.length} ${list.length===1?'actuación':'actuaciones'}${scope?' · '+scope:''}${entityCodes().length||state.office||state.stage||state.annexFilter||state.query?' con los filtros aplicados':''}`;
     $('dialogEvents').innerHTML=list.length?groups.map(dayEntityCard).join(''):'<div class="empty-state"><h3>No hay actuaciones con los filtros aplicados.</h3><p>Puedes cambiar los filtros para consultar esta fecha.</p></div>';
     $('dateDialog').scrollTop=0;
     if(!$('dateDialog').open)$('dateDialog').showModal();
@@ -424,25 +427,38 @@
   function closeDate() {state.date='';writeRoute();$('dateDialog').close();dialogOpener?.focus();}
   function showToast(message){clearTimeout(toastTimer);$('toast').textContent=message;$('toast').hidden=false;toastTimer=setTimeout(()=>$('toast').hidden=true,3500);}
   function changeMonth(delta){const index=months.indexOf(state.month)+delta;if(index<0||index>=months.length)return;state.month=months[index];state.all=false;state.date='';writeRoute();render();}
+  function openEntities(){
+    const current=entityCodes();
+    $('entityChoices').innerHTML=[...entities.values()].map(e=>`<label class="export-option" data-entity-name="${escapeHTML(clean(e.name))}"><input type="checkbox" name="entity" value="${e.code}" ${!current.length||current.includes(e.code)?'checked':''}>${escapeHTML(e.name)}</label>`).join('');
+    $('entitySearch').value='';countEntities();$('entitiesDialog').showModal();
+  }
+  function countEntities(){const inputs=[...$('entityChoices').querySelectorAll('input:checked')],local=inputs.filter(i=>i.value!=='FED').length;$('entitySelectionCount').textContent=`${local} entidades${inputs.some(i=>i.value==='FED')?' y ámbito federal':''}`;$('applyEntities').disabled=!inputs.length;}
+  function closeEntities(){$('entitiesDialog').close();renderFilters();$('stateFilter').focus();}
   function bind() {
     $('filterForm').addEventListener('submit',e=>e.preventDefault());
-    [['stateFilter','entity'],['officeFilter','office'],['stageFilter','stage'],['annexFilter','annexFilter']].forEach(([id,key])=>$(id).addEventListener('change',()=>{state[key]=$(id).value;if(key==='annexFilter'&&state.annexFilter==='1')state.annex=true;state.date='';writeRoute();render();}));
+    $('jumpDownloads').addEventListener('click',()=>{$('downloads').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});$('downloads').focus({preventScroll:true});});
+    $('closeEntities').addEventListener('click',closeEntities);$('entitiesDialog').addEventListener('cancel',e=>{e.preventDefault();closeEntities();});
+    $('entitiesForm').addEventListener('submit',e=>{e.preventDefault();const codes=[...$('entityChoices').querySelectorAll('input:checked')].map(i=>i.value);if(!codes.length)return;chooseEntities(codes);state.date='';$('entitiesDialog').close();writeRoute();render();$('stateFilter').focus();});
+    $('entityChoices').addEventListener('change',countEntities);
+    for(const[id,checked]of[['allEntities',true],['noneEntities',false]])$(id).addEventListener('click',()=>{$('entityChoices').querySelectorAll('input').forEach(i=>i.checked=checked);countEntities();});
+    $('entitySearch').addEventListener('input',()=>{const q=clean($('entitySearch').value);$('entityChoices').querySelectorAll('label').forEach(l=>l.hidden=!l.dataset.entityName.includes(q));});
+    [['stateFilter','entity'],['officeFilter','office'],['stageFilter','stage'],['annexFilter','annexFilter']].forEach(([id,key])=>$(id).addEventListener('change',()=>{if(key==='entity'){if($(id).value==='multiple'){openEntities();return;}chooseEntities($(id).value?[$(id).value]:[]);}else state[key]=$(id).value;if(key==='annexFilter'&&state.annexFilter==='1')state.annex=true;state.date='';writeRoute();render();}));
     let searchTimer;$('searchInput').addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{state.query=$('searchInput').value;state.date='';writeRoute();render();},180);});
     $('annexToggle').addEventListener('change',()=>{state.annex=$('annexToggle').checked;if(!state.annex&&state.stage==='OAC')state.stage='';if(!state.annex&&state.annexFilter==='1')state.annexFilter='';writeRoute();render();});
     $('legalDatesToggle').addEventListener('change',()=>{state.legalDates=$('legalDatesToggle').checked;state.date='';writeRoute();render();});
-    $('clearFilters').addEventListener('click',()=>{state.entity='';state.office='';state.stage='';state.annexFilter='';state.query='';state.legalDates=true;state.all=false;state.date='';writeRoute();render();});
+    $('clearFilters').addEventListener('click',()=>{chooseEntities([]);state.office='';state.stage='';state.annexFilter='';state.query='';state.legalDates=true;state.all=false;state.date='';writeRoute();render();});
     $('calendarView').addEventListener('click',()=>{state.view='calendario';writeRoute();render();});$('mapView').addEventListener('click',()=>{state.view='mapa';writeRoute();render();});
     $('gridFormat').addEventListener('click',()=>{state.format='grid';state.all=false;writeRoute();render();});$('agendaFormat').addEventListener('click',()=>{state.format='agenda';writeRoute();render();});
     $('monthSelect').addEventListener('change',()=>{state.month=$('monthSelect').value;state.all=false;state.date='';writeRoute();render();});
     $('prevMonth').addEventListener('click',()=>changeMonth(-1));$('nextMonth').addEventListener('click',()=>changeMonth(1));
     $('searchAll').addEventListener('click',()=>{state.all=!state.all;writeRoute();render();});
-    $('clearMap').addEventListener('click',()=>{state.entity='';writeRoute();render();});$('federalMap').addEventListener('click',()=>selectEntity('FED'));
+    $('clearMap').addEventListener('click',()=>{chooseEntities([]);writeRoute();render();});$('federalMap').addEventListener('click',()=>selectEntity('FED'));
     document.addEventListener('click',e=>{
       const capture=e.target.closest('[data-capture]');if(capture){openCapture(capture.dataset.capture,capture);return;}
       const date=e.target.closest('[data-date]');if(date){openDate(date.dataset.date,true,date);return;}
       const stage=e.target.closest('[data-stage]');if(stage){state.stage=state.stage===stage.dataset.stage?'':stage.dataset.stage;writeRoute();render();return;}
       const entity=e.target.closest('[data-entity]');if(entity){selectEntity(entity.dataset.entity);return;}
-      const clear=e.target.closest('[data-clear]');if(clear){state[clear.dataset.clear]=clear.dataset.clear==='legalDates'?true:'';writeRoute();render();return;}
+      const clear=e.target.closest('[data-clear]');if(clear){if(clear.dataset.clear==='entities')chooseEntities([]);else state[clear.dataset.clear]=clear.dataset.clear==='legalDates'?true:'';writeRoute();render();return;}
       const go=e.target.closest('[data-goto-month]');if(go){state.month=go.dataset.gotoMonth;state.all=false;writeRoute();render();}
       const anchor=e.target.closest('a[href^="#"]');if(anchor){const target=document.getElementById(anchor.getAttribute('href').slice(1));if(target){e.preventDefault();target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}}
     });
@@ -459,9 +475,9 @@
     $('exportForm').addEventListener('click',e=>{const all=e.target.closest('[data-export-all]'),none=e.target.closest('[data-export-clear]');const group=all?.dataset.exportAll||none?.dataset.exportClear;if(group){$('exportForm').querySelectorAll(`[data-export-group="${group}"] input`).forEach(i=>{i.checked=!!all;});updateExportPreview();}});
     $('exportForm').addEventListener('input',e=>{const group=e.target.dataset.exportSearch;if(group){const q=clean(e.target.value);$('exportForm').querySelectorAll(`[data-export-group="${group}"] .export-option`).forEach(label=>{label.hidden=!label.dataset.optionText.includes(q);});}});
     // Keep keyboard focus inside the uppermost dialog, including its final viewport.
-    const topDialog=()=>[$('captureDialog'),$('exportDialog'),$('dateDialog')].find(d=>d.open);
+    const topDialog=()=>[$('captureDialog'),$('monthsDialog'),$('entitiesDialog'),$('exportDialog'),$('dateDialog')].find(d=>d.open);
     const focusable=d=>[...d.querySelectorAll('a[href],button,input,select,textarea,summary,[tabindex]:not([tabindex="-1"])')].filter(el=>!el.disabled&&el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden');
-    document.addEventListener('keydown',e=>{const d=topDialog();if(!d)return;if(e.key==='Escape'){e.preventDefault();e.stopPropagation();if(d===$('captureDialog'))closeCapture();else if(d===$('exportDialog'))closeExport();else closeDate();return;}if(e.key==='Tab'){const list=focusable(d),first=list[0],last=list.at(-1);if(!first){e.preventDefault();d.focus();return;}if(e.shiftKey&&(document.activeElement===first||!d.contains(document.activeElement))){e.preventDefault();last.focus();}else if(!e.shiftKey&&(document.activeElement===last||!d.contains(document.activeElement))){e.preventDefault();first.focus();}}},true);
+    document.addEventListener('keydown',e=>{const d=topDialog();if(!d)return;if(e.key==='Escape'){e.preventDefault();e.stopPropagation();if(d===$('captureDialog'))closeCapture();else if(d===$('monthsDialog'))$('closeMonths').click();else if(d===$('entitiesDialog'))closeEntities();else if(d===$('exportDialog'))closeExport();else closeDate();return;}if(e.key==='Tab'){const list=focusable(d),first=list[0],last=list.at(-1);if(!first){e.preventDefault();d.focus();return;}if(e.shiftKey&&(document.activeElement===first||!d.contains(document.activeElement))){e.preventDefault();last.focus();}else if(!e.shiftKey&&(document.activeElement===last||!d.contains(document.activeElement))){e.preventDefault();first.focus();}}},true);
     document.addEventListener('focusin',e=>{const d=topDialog();if(d&&!d.contains(e.target))focusable(d)[0]?.focus();},true);
     const pointers=new Map();let pinchDistance=0,pinchZoom=1;
     const viewport=$('captureViewport');
@@ -481,7 +497,7 @@
       (DATA.states||[]).forEach(e=>entities.set(e.code,{...e,offices:(e.offices||[]).map(o=>typeof o==='string'?o:o.literal)}));
       if(!entities.has('FED'))entities.set('FED',DATA.federal||{code:'FED',name:'Ámbito federal',offices:sort(unique(events.flatMap(e=>e.scopes||[]).filter(s=>s.entity_code==='FED').map(s=>s.office)))});
       const stateOptions=[...entities.values()].filter(e=>e.code!=='FED').sort((a,b)=>collator.compare(a.name,b.name));stateOptions.push(entities.get('FED'));
-      $('stateFilter').innerHTML='<option value="">Todas las entidades y ámbito federal</option>'+stateOptions.map(e=>`<option value="${escapeHTML(e.code)}">${escapeHTML(e.name)}</option>`).join('');
+      $('stateFilter').innerHTML='<option value="">Todas las entidades y ámbito federal</option><option value="multiple">Seleccionar varias entidades…</option>'+stateOptions.map(e=>`<option value="${escapeHTML(e.code)}">${escapeHTML(e.name)}</option>`).join('');
       const officeOptions=officeChoices();
       $('officeFilter').innerHTML='<option value="">Todos los cargos</option>'+sort(officeOptions).map(o=>`<option>${escapeHTML(o)}</option>`).join('');
       $('stageFilter').innerHTML='<option value="">Todos los periodos y actuaciones</option>'+Object.entries(STAGES).map(([s,t])=>`<option value="${s}">${escapeHTML(t.full)}</option>`).join('');
