@@ -164,7 +164,7 @@
     return groupedDates(list).map(([date,es])=>{const p=dateParts(date);const wd=WEEKDAYS[(new Date(Date.UTC(p.y,p.m-1,p.d)).getUTCDay()+6)%7];return `<section class="agenda-day" aria-label="${escapeHTML(fullDate(date))}"><div class="agenda-date"><strong>${p.d}</strong><span>${includeMonth?MONTHS[p.m-1].slice(0,3)+' '+p.y:wd.slice(0,3)}</span><button class="text-button date-link" type="button" data-date="${date}" aria-label="Abrir detalle del ${escapeHTML(fullDate(date))}">Ver día</button></div><div class="agenda-events">${es.map(e=>eventCard(e)).join('')}</div></section>`;}).join('');
   }
   function renderCalendar() {
-    $('monthTitle').textContent=monthName(state.month);$('monthSelect').value=state.month;
+    $('monthTitle').textContent=state.all?`${monthName(months[0])} — ${monthName(months[months.length-1])}`:monthName(state.month);$('monthSelect').value=state.month;
     const index=months.indexOf(state.month);$('prevMonth').disabled=index<=0;$('nextMonth').disabled=index>=months.length-1;
     const list=filteredEvents(state.all);const localList=filteredEvents(false);
     const count=groupedDates(list).length;

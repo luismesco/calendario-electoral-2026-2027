@@ -38,3 +38,10 @@
 
 @media(max-width:47.999rem){.more-events{display:none}}
 @media(min-width:48rem){.cell-event .mini-stage{overflow-wrap:normal}}
+
+#calendarSection>.month-navigation{position:sticky;top:0;z-index:10;width:100%;min-height:4.25rem;margin-top:2.2rem;padding:.6rem 0;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 .25rem .5rem #3417130a;gap:.65rem}
+#calendarSection>.month-navigation>div{min-width:0}
+#calendarSection>.month-navigation h2{font-size:clamp(1.1rem,3vw,1.65rem);line-height:1.3;margin:0;letter-spacing:-.035em}
+#calendarSection>.calendar-toolbar{margin-top:1rem}
+#calendarSection :is(.day-number,.cell-event,.date-link,.agenda-day){scroll-margin-top:6.5rem}
+@media print{#calendarSection>.month-navigation{position:static;box-shadow:none;margin-top:1rem}}
