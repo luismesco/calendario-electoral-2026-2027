@@ -65,3 +65,5 @@
 .download-heading{display:block;font-size:.75rem;font-weight:600}.download-formats{display:flex;flex-wrap:wrap;gap:.5rem;margin:.45rem 0}.download-formats .download-link{justify-content:center;min-width:4.25rem;border:1px solid var(--line);border-radius:.3rem;background:var(--white);padding:.45rem .75rem;text-decoration:none;font-weight:600}.download-formats .download-link:hover{border-color:var(--wine);background:var(--wine-soft)}
 
 .query-switches{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;min-width:0}.query-switches .annex-switch{min-height:2.75rem;max-width:100%}.query-switches .annex-switch>span:last-child{min-width:0}.query-top{flex-wrap:wrap}
+
+.download-period{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;font-size:.7rem;margin-top:.5rem}.download-period select{font:inherit;font-size:.8rem;max-width:100%;min-width:0;min-height:2.75rem;border:1px solid var(--line);border-radius:.3rem;background:var(--white);padding:.4rem .5rem}.document-status{font-size:.75rem;line-height:1.6;max-width:28rem;margin-top:.4rem;color:var(--wine)}.download-link[aria-disabled=true]{opacity:.5;pointer-events:none}

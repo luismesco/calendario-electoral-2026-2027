@@ -12,6 +12,7 @@
   <link rel="preload" href="assets/fonts/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <script src="documents.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#consulta">Ir a la consulta</a>
@@ -47,7 +48,7 @@
           <button id="clearFilters" class="text-button clear-filter" type="button">Limpiar filtros</button>
         </form>
         <div id="activeFilters" class="active-filters" aria-label="Filtros aplicados"></div>
-        <div class="download-bar"><div class="download-option"><strong class="download-heading">Descargar calendario</strong><div class="download-formats" role="group" aria-label="Formatos del calendario"><a id="downloadPDF" class="download-link" href="downloads/Calendario_mensual_2026_2027_con_anexo_1.pdf" download>PDF</a><a id="downloadDOCX" class="download-link" href="downloads/Calendario_mensual_2026_2027_con_anexo_1.docx" download>DOCX</a><a id="downloadODT" class="download-link" href="downloads/Calendario_mensual_2026_2027_con_anexo_1.odt" download>ODT</a></div><small id="odtVersion">Con anexo 1 · 14 meses · sin aplicar filtros</small></div><button id="openExport" class="export-button" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#calendario"></use></svg>Agendar fechas (.ics)</button></div>
+        <div class="download-bar"><div class="download-option"><strong class="download-heading">Descargar selección</strong><label class="download-period" for="documentPeriod">Periodo<select id="documentPeriod"><option value="all">Los 14 meses</option><option value="month">Mes seleccionado</option></select></label><div class="download-formats" role="group" aria-label="Formatos del calendario"><button id="downloadPDF" class="download-link" type="button">PDF</button><button id="downloadDOCX" class="download-link" type="button">DOCX</button><button id="downloadODT" class="download-link" type="button">ODT</button></div><small id="odtVersion">14 meses · según los filtros seleccionados</small><p id="documentStatus" class="document-status" role="status" aria-live="polite" hidden></p></div><button id="openExport" class="export-button" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#calendario"></use></svg>Agendar fechas (.ics)</button></div>
       </section>
 
       <section id="calendarSection" aria-labelledby="monthTitle">

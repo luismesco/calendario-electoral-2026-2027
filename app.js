@@ -17,7 +17,7 @@
     JUR:{name:'Resolución de impugnaciones',full:'Plazos de resolución de medios de impugnación',color:'var(--jur)',icon:'resolucion',description:'Límites para resolver o calificar elecciones, sujetos a sus condiciones. Se distinguen de los plazos para presentar una demanda.'}
   };
   const PREVIEW_STAGE={OAC:'Apoyo',PC:'Precampaña',CA:'Campaña',PE:'Jornada y cómputos',JUR:'Resolución'};
-  let DATA, entities = new Map(), months = [], events = [], intervals = [], rules = [];
+  let DATA, dataDigest='', entities = new Map(), months = [], events = [], intervals = [], rules = [];
   let state = {month:'2026-11',entity:'',office:'',stage:'',annexFilter:'',query:'',annex:true,legalDates:true,view:'calendario',format:'grid',all:false,date:'',mapAll:true};
   let dialogOpener = null, mapLoaded = false, toastTimer;
   const captureRegistry=new Map(),captureCache=new Map();let captureOpener=null,captureZoom=1;
@@ -237,10 +237,10 @@
     [...$('stageFilter').options].forEach(o=>{if(o.value==='OAC')o.hidden=!state.annex;});
     ['PDF','DOCX','ODT'].forEach(format=>{
       const link=$('download'+format);
-      link.href=`downloads/Calendario_mensual_2026_2027_${state.annex?'con':'sin'}_anexo_1.${format.toLowerCase()}`;
       link.setAttribute('aria-label',`Descargar calendario ${format} ${state.annex?'con':'sin'} anexo 1`);
     });
-    $('odtVersion').textContent=`${state.annex?'Con':'Sin'} anexo 1 · 14 meses · sin aplicar filtros`;
+    window.calendarDownloadState={selection:{entity:state.entity,office:state.office,stage:state.stage,annexFilter:state.annexFilter,query:state.query,annex:state.annex,legalDates:state.legalDates,month:state.month},dataSha256:dataDigest,monthLabel:monthName(state.month)};
+    dispatchEvent(new CustomEvent('calendar:selection',{detail:window.calendarDownloadState}));
   }
   function renderLegal() {
     const list=rules.map(filterRule).filter(Boolean);$('relativeCount').textContent=`${list.length} ${list.length===1?'regla':'reglas'}`;
@@ -473,7 +473,8 @@
   }
   async function init() {
     try{
-      const response=await fetch('data/calendar.json');if(!response.ok)throw new Error('data');DATA=await response.json();
+      const response=await fetch('data/calendar.json');if(!response.ok)throw new Error('data');const dataText=await response.text();DATA=JSON.parse(dataText);
+      dataDigest=[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(dataText)))].map(b=>b.toString(16).padStart(2,'0')).join('');
       months=DATA.months||Array.from({length:14},(_,i)=>{const d=new Date(Date.UTC(2026,10+i,1));return d.toISOString().slice(0,7);});
       events=(DATA.events||[]).filter(e=>/^\d{4}-\d{2}-\d{2}$/.test(e.date)).sort((a,b)=>a.date.localeCompare(b.date));intervals=DATA.intervals||[];rules=DATA.rules||[];
       events.forEach(capturesFor);
