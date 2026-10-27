@@ -228,9 +228,12 @@
     if(state.annexFilter)chips.push(['annexFilter',{'1':'Anexo 1 · Apoyo','2':'Anexo 2 · Precampaña','3':'Anexo 3 · Campaña','otras':'Otras fuentes'}[state.annexFilter]]);
     $('activeFilters').innerHTML=chips.map(([key,label])=>`<span class="filter-chip">${escapeHTML(label)}<button data-clear="${key}" type="button" aria-label="Quitar filtro ${escapeHTML(label)}">×</button></span>`).join('');
     [...$('stageFilter').options].forEach(o=>{if(o.value==='OAC')o.hidden=!state.annex;});
-    $('downloadODT').href=`downloads/Calendario_mensual_2026_2027_${state.annex?'con':'sin'}_anexo_1.odt`;
-    $('downloadODT').setAttribute('aria-label',`Descargar calendario editable completo ODT ${state.annex?'con':'sin'} anexo 1`);
-    $('odtVersion').textContent=`${state.annex?'Con':'Sin'} anexo 1 · los 14 meses completos, sin aplicar los filtros`;
+    ['PDF','DOCX','ODT'].forEach(format=>{
+      const link=$('download'+format);
+      link.href=`downloads/Calendario_mensual_2026_2027_${state.annex?'con':'sin'}_anexo_1.${format.toLowerCase()}`;
+      link.setAttribute('aria-label',`Descargar calendario ${format} ${state.annex?'con':'sin'} anexo 1`);
+    });
+    $('odtVersion').textContent=`${state.annex?'Con':'Sin'} anexo 1 · 14 meses · sin aplicar filtros`;
   }
   function renderLegal() {
     const list=rules.map(filterRule).filter(Boolean);$('relativeCount').textContent=`${list.length} ${list.length===1?'regla':'reglas'}`;

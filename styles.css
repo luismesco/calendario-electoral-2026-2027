@@ -61,3 +61,5 @@
 .day-entity-events{display:grid;gap:.8rem;padding:.75rem;min-width:0}
 .day-entity-events .event-summary{display:none}
 @media(min-width:48rem){.entity-silhouette{width:3.75rem;height:3.75rem;flex-basis:3.75rem}.day-entity-label strong{font-size:1.1rem}.day-entity-stages{max-width:none}.day-entity-events{padding:1rem}}
+
+.download-heading{display:block;font-size:.75rem;font-weight:600}.download-formats{display:flex;flex-wrap:wrap;gap:.5rem;margin:.45rem 0}.download-formats .download-link{justify-content:center;min-width:4.25rem;border:1px solid var(--line);border-radius:.3rem;background:var(--white);padding:.45rem .75rem;text-decoration:none;font-weight:600}.download-formats .download-link:hover{border-color:var(--wine);background:var(--wine-soft)}
