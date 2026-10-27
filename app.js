@@ -18,7 +18,7 @@
   };
   const PREVIEW_STAGE={OAC:'Apoyo',PC:'Precampaña',CA:'Campaña',PE:'Jornada y cómputos',JUR:'Resolución'};
   let DATA, entities = new Map(), months = [], events = [], intervals = [], rules = [];
-  let state = {month:'2026-11',entity:'',office:'',stage:'',annexFilter:'',query:'',annex:true,view:'calendario',format:'grid',all:false,date:'',mapAll:true};
+  let state = {month:'2026-11',entity:'',office:'',stage:'',annexFilter:'',query:'',annex:true,legalDates:true,view:'calendario',format:'grid',all:false,date:'',mapAll:true};
   let dialogOpener = null, mapLoaded = false, toastTimer;
   const captureRegistry=new Map(),captureCache=new Map();let captureOpener=null,captureZoom=1;
   let exportOpener=null;let exportObjectURLs=[];let exportRevision=0;
@@ -91,6 +91,10 @@
     const labels=originals.flatMap(original=>[original,...(Array.isArray(DATA.officeFacets?.[original])?DATA.officeFacets[original]:[])]);
     return sort([...new Map(labels.map(label=>[clean(label),label])).values()]);
   }
+  function hasINEDate(record,scope) {
+    const sources=scope.sources?.length?scope.sources:(record.sources||[]);
+    return sources.some(s=>s.type==='ine'&&['Periodos y plazos de fiscalización','Fecha o periodo del calendario'].includes(s.role));
+  }
   function filterScopes(record, ignoreMonth=false) {
     if(!variantMatches(record)||(!state.annex&&record.stage==='OAC')||(state.stage&&record.stage!==state.stage))return null;
     const annexStages={'1':'OAC','2':'PC','3':'CA'};
@@ -99,6 +103,7 @@
     const terms=clean(state.query).trim().split(/\s+/).filter(Boolean);
     const base=clean([record.kind,record.label,record.rule,record.condition,record.trigger,eventContext(record)].join(' '));
     const scopes=(record.scopes||[]).filter(s=>{
+      if(!state.legalDates&&!hasINEDate(record,s))return false;
       if(state.entity&&s.entity_code!==state.entity)return false;
       if(state.office&&!officeMatches(s.office,state.office))return false;
       const haystack=base+' '+clean([s.entity,s.office,s.election_scope,...(s.qualifications||[]).map(q=>q.literal)].join(' '));
@@ -221,7 +226,9 @@
   }
   function renderFilters() {
     $('stateFilter').value=state.entity;$('officeFilter').value=state.office;$('stageFilter').value=state.stage;$('annexFilter').value=state.annexFilter;$('searchInput').value=state.query;$('annexToggle').checked=state.annex;
+    $('legalDatesToggle').checked=state.legalDates;
     const chips=[];
+    if(!state.legalDates)chips.push(['legalDates','Sólo calendarios del INE']);
     if(state.entity)chips.push(['entity',entities.get(state.entity)?.name||state.entity]);
     if(state.office)chips.push(['office',state.office]);if(state.stage)chips.push(['stage',STAGES[state.stage]?.full||state.stage]);
     if(state.query)chips.push(['query',`“${state.query}”`]);
@@ -282,6 +289,7 @@
     state.entity=entities.has(p.get('entidad'))?p.get('entidad'):'';
     state.office=p.get('cargo')||'';state.stage=STAGES[p.get('etapa')]?p.get('etapa'):'';
     state.query=p.get('buscar')||'';state.annex=p.get('anexo')!=='sin';
+    state.legalDates=p.get('adicionales')!=='sin';
     state.annexFilter=['1','2','3','otras'].includes(p.get('fuente'))?p.get('fuente'):'';
     if(state.annexFilter==='1')state.annex=true;
     state.view=p.get('vista')==='mapa'?'mapa':'calendario';state.format=p.get('formato')==='agenda'?'agenda':'grid';state.all=p.get('todo')==='1';
@@ -292,6 +300,7 @@
     const p=new URLSearchParams({mes:state.month,vista:state.view,anexo:state.annex?'con':'sin'});
     if(state.entity)p.set('entidad',state.entity);if(state.office)p.set('cargo',state.office);if(state.stage)p.set('etapa',state.stage);if(state.query)p.set('buscar',state.query);if(state.format!=='grid')p.set('formato',state.format);if(state.all)p.set('todo','1');if(state.date)p.set('fecha',state.date);
     if(state.annexFilter)p.set('fuente',state.annexFilter);
+    if(!state.legalDates)p.set('adicionales','sin');
     history[push?'pushState':'replaceState'](null,'','#'+p.toString());
   }
   function render() {
@@ -329,6 +338,7 @@
       const variant=selected.annexes.has('1')?'A':'B';if(e.variants&&!e.variants.includes(variant))return;
       const base=clean([e.kind,e.condition,eventContext(e)].join(' '));
       (e.scopes||[]).forEach(scope=>{
+        if(!$('exportLegalDates').checked&&!hasINEDate(e,scope))return;
         if(!selected.entities.has(scope.entity_code)||!selected.offices.some(office=>officeMatches(scope.office,office)))return;
         const haystack=base+' '+clean([scope.entity,scope.office,scope.election_scope,...(scope.qualifications||[]).map(q=>q.literal)].join(' '));
         if(!terms.every(t=>haystack.includes(t)))return;
@@ -342,6 +352,7 @@
   function exportOptions(id,values,selected) {$(id).innerHTML=values.map(([value,label])=>`<label class="export-option" data-option-text="${escapeHTML(clean(label))}"><input type="checkbox" value="${escapeHTML(value)}" ${selected.has(value)?'checked':''}><span>${escapeHTML(label)}</span></label>`).join('');}
   function openExport() {
     exportOpener=document.activeElement;
+    $('exportLegalDates').checked=state.legalDates;
     const entityValues=[...entities.values()].filter(e=>e.code!=='FED').sort((a,b)=>collator.compare(a.name,b.name));entityValues.push(entities.get('FED'));
     exportOptions('exportEntities',entityValues.map(e=>[e.code,e.name]),new Set(state.entity?[state.entity]:entityValues.map(e=>e.code)));
     exportOptions('exportStages',Object.entries(STAGES).map(([key,v])=>[key,v.full]),new Set(state.stage?[state.stage]:Object.keys(STAGES).filter(s=>state.annex||s!=='OAC')));
@@ -418,7 +429,8 @@
     [['stateFilter','entity'],['officeFilter','office'],['stageFilter','stage'],['annexFilter','annexFilter']].forEach(([id,key])=>$(id).addEventListener('change',()=>{state[key]=$(id).value;if(key==='annexFilter'&&state.annexFilter==='1')state.annex=true;state.date='';writeRoute();render();}));
     let searchTimer;$('searchInput').addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{state.query=$('searchInput').value;state.date='';writeRoute();render();},180);});
     $('annexToggle').addEventListener('change',()=>{state.annex=$('annexToggle').checked;if(!state.annex&&state.stage==='OAC')state.stage='';if(!state.annex&&state.annexFilter==='1')state.annexFilter='';writeRoute();render();});
-    $('clearFilters').addEventListener('click',()=>{state.entity='';state.office='';state.stage='';state.annexFilter='';state.query='';state.all=false;state.date='';writeRoute();render();});
+    $('legalDatesToggle').addEventListener('change',()=>{state.legalDates=$('legalDatesToggle').checked;state.date='';writeRoute();render();});
+    $('clearFilters').addEventListener('click',()=>{state.entity='';state.office='';state.stage='';state.annexFilter='';state.query='';state.legalDates=true;state.all=false;state.date='';writeRoute();render();});
     $('calendarView').addEventListener('click',()=>{state.view='calendario';writeRoute();render();});$('mapView').addEventListener('click',()=>{state.view='mapa';writeRoute();render();});
     $('gridFormat').addEventListener('click',()=>{state.format='grid';state.all=false;writeRoute();render();});$('agendaFormat').addEventListener('click',()=>{state.format='agenda';writeRoute();render();});
     $('monthSelect').addEventListener('change',()=>{state.month=$('monthSelect').value;state.all=false;state.date='';writeRoute();render();});
@@ -430,7 +442,7 @@
       const date=e.target.closest('[data-date]');if(date){openDate(date.dataset.date,true,date);return;}
       const stage=e.target.closest('[data-stage]');if(stage){state.stage=state.stage===stage.dataset.stage?'':stage.dataset.stage;writeRoute();render();return;}
       const entity=e.target.closest('[data-entity]');if(entity){selectEntity(entity.dataset.entity);return;}
-      const clear=e.target.closest('[data-clear]');if(clear){state[clear.dataset.clear]='';writeRoute();render();return;}
+      const clear=e.target.closest('[data-clear]');if(clear){state[clear.dataset.clear]=clear.dataset.clear==='legalDates'?true:'';writeRoute();render();return;}
       const go=e.target.closest('[data-goto-month]');if(go){state.month=go.dataset.gotoMonth;state.all=false;writeRoute();render();}
       const anchor=e.target.closest('a[href^="#"]');if(anchor){const target=document.getElementById(anchor.getAttribute('href').slice(1));if(target){e.preventDefault();target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}}
     });
