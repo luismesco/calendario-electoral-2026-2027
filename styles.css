@@ -45,3 +45,19 @@
 #calendarSection>.calendar-toolbar{margin-top:1rem}
 #calendarSection :is(.day-number,.cell-event,.date-link,.agenda-day){scroll-margin-top:6.5rem}
 @media print{#calendarSection>.month-navigation{position:static;box-shadow:none;margin-top:1rem}}
+.day-entity{min-width:0;border:1px solid var(--line);border-radius:.45rem;background:var(--white)}
+.day-entity>summary{display:flex;align-items:center;gap:.8rem;list-style:none;cursor:pointer;padding:.85rem 1rem;min-height:5.5rem}
+.day-entity>summary::-webkit-details-marker{display:none}
+.entity-silhouette{width:3.25rem;height:3.25rem;flex:0 0 3.25rem;color:var(--wine)}
+.day-entity-label{display:grid;gap:.3rem;min-width:0;flex:1}
+.day-entity-label strong{font-size:.95rem;line-height:1.4;overflow-wrap:anywhere}
+.day-entity-label>span{font-size:.72rem;color:var(--muted)}
+.day-entity-stages{display:flex;flex-wrap:wrap;gap:.35rem;max-width:3rem;justify-content:center}
+.day-entity-stages .icon{width:1rem;height:1rem;color:var(--stage)}
+.day-entity-toggle{font-size:1.5rem;color:var(--wine);width:1.25rem;flex:0 0 1.25rem;text-align:center;line-height:1}
+.day-entity[open]>summary .day-entity-toggle{font-size:0}
+.day-entity[open]>summary .day-entity-toggle:after{content:'−';font-size:1.5rem}
+.day-entity[open]>summary{border-bottom:1px solid var(--line);background:#f6eee4}
+.day-entity-events{display:grid;gap:.8rem;padding:.75rem;min-width:0}
+.day-entity-events .event-summary{display:none}
+@media(min-width:48rem){.entity-silhouette{width:3.75rem;height:3.75rem;flex-basis:3.75rem}.day-entity-label strong{font-size:1.1rem}.day-entity-stages{max-width:none}.day-entity-events{padding:1rem}}

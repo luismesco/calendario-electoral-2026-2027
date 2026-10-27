@@ -158,6 +158,23 @@
   function eventCard(e, open=false) {
     return `<details class="event-card" style="${stageStyle(e.stage)}" ${open?'open':''} data-event-id="${escapeHTML(e.id)}"><summary>${icon(eventIcon(e))}<span><span class="event-meta">${escapeHTML(eventContext(e))}</span><h3>${escapeHTML(eventTitle(e))}</h3><span class="event-summary">${escapeHTML(scopeSummary(e))}</span></span></summary>${eventBody(e)}</details>`;
   }
+  function dayEntities(list) {
+    const groups=new Map();
+    list.forEach(e=>{
+      const scopes=e._scopes||e.scopes||[];
+      unique(scopes.map(s=>s.entity_code)).forEach(code=>{
+        const selected=scopes.filter(s=>s.entity_code===code);
+        if(!groups.has(code))groups.set(code,{code,name:entities.get(code)?.name||displayEntity(selected[0]),events:[]});
+        groups.get(code).events.push({...e,_scopes:selected});
+      });
+    });
+    return [...groups.values()].sort((a,b)=>a.code==='FED'?1:b.code==='FED'?-1:collator.compare(a.name,b.name));
+  }
+  function dayEntityCard(group) {
+    const silhouette=group.code==='FED'?icon('mapa','entity-silhouette'):`<svg class="entity-silhouette" aria-hidden="true" focusable="false"><use href="assets/estados.svg#${escapeHTML(group.code)}"></use></svg>`;
+    const stages=unique(group.events.map(e=>e.stage));
+    return `<details class="day-entity" data-day-entity="${escapeHTML(group.code)}"><summary>${silhouette}<span class="day-entity-label"><strong>${escapeHTML(group.name)}</strong><span>${group.events.length} ${group.events.length===1?'actuación':'actuaciones'}</span></span><span class="day-entity-stages" aria-hidden="true">${stages.map(stage=>`<span style="${stageStyle(stage)}">${icon(STAGES[stage]?.icon||'calendario')}</span>`).join('')}</span><span class="day-entity-toggle" aria-hidden="true">+</span></summary><div class="day-entity-events">${group.events.map(e=>eventCard(e,true)).join('')}</div></details>`;
+  }
   function groupedDates(list) {const m=new Map();list.forEach(e=>{if(!m.has(e.date))m.set(e.date,[]);m.get(e.date).push(e);});return [...m.entries()].sort(([a],[b])=>a.localeCompare(b));}
   function agendaHTML(list, includeMonth=false) {
     if(!list.length)return '<div class="empty-state"><h3>No hay actuaciones con estos filtros.</h3><p>Prueba con otra entidad, cargo o periodo.</p></div>';
@@ -383,8 +400,11 @@
   }
   function openDate(date,push=true,opener=null) {
     if(opener)dialogOpener=opener;state.date=date;if(push)writeRoute(true);
-    const list=filteredEvents(true).filter(e=>e.date===date);$('dialogTitle').textContent=fullDate(date);$('dialogSummary').textContent=`${list.length} ${list.length===1?'actuación':'actuaciones'}${state.entity||state.office||state.stage||state.query?' con los filtros aplicados':''}`;
-    $('dialogEvents').innerHTML=list.length?list.map(e=>eventCard(e,true)).join(''):'<div class="empty-state"><h3>No hay actuaciones con los filtros aplicados.</h3><p>Puedes cambiar los filtros para consultar esta fecha.</p></div>';
+    const list=filteredEvents(true).filter(e=>e.date===date),groups=dayEntities(list),localCount=groups.filter(g=>g.code!=='FED').length;
+    const scope=[localCount?`${localCount} ${localCount===1?'entidad':'entidades'}`:'',groups.some(g=>g.code==='FED')?'ámbito federal':''].filter(Boolean).join(' y ');
+    $('dialogTitle').textContent=fullDate(date);$('dialogSummary').textContent=`${list.length} ${list.length===1?'actuación':'actuaciones'}${scope?' · '+scope:''}${state.entity||state.office||state.stage||state.annexFilter||state.query?' con los filtros aplicados':''}`;
+    $('dialogEvents').innerHTML=list.length?groups.map(dayEntityCard).join(''):'<div class="empty-state"><h3>No hay actuaciones con los filtros aplicados.</h3><p>Puedes cambiar los filtros para consultar esta fecha.</p></div>';
+    $('dateDialog').scrollTop=0;
     if(!$('dateDialog').open)$('dateDialog').showModal();
   }
   function closeDate() {state.date='';writeRoute();$('dateDialog').close();dialogOpener?.focus();}
