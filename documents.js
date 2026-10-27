@@ -13,8 +13,8 @@
     const current=key();
     if(active&&current!==lastKey){active.abort();active=null;busy(false);status('Selección modificada. Vuelve a descargar.');}
     lastKey=current;
-    $('odtVersion').textContent=`${detail.selection.annex?'Con':'Sin'} anexo 1 · ${$('documentPeriod').value==='all'?'14 meses':$('documentPeriod').value==='selected'?chosenMonths.length+' meses':detail.monthLabel} · según los filtros seleccionados`;
-    const s=selected();$('editMonths').hidden=s.period!=='selected';
+    $('odtVersion').textContent='';$('odtVersion').hidden=true;
+    const s=selected();window.calendarDocumentPeriod={period:s.period,months:[...s.months],month:s.month};$('editMonths').hidden=s.period!=='selected';
     $('documentSelection').textContent=[s.period==='selected'?detail.availableMonths.filter(m=>chosenMonths.includes(m.value)).map(m=>m.label).join(', '):s.period==='month'?detail.monthLabel:'Los 14 meses',detail.entityNames?.length?detail.entityNames.join(', '):'Todas las entidades y ámbito federal',detail.officeLabel||'Todos los cargos',detail.stageLabel||'Todas las etapas',detail.sourceLabel||'Todas las fuentes',s.annex?'Con anexo 1':'Sin anexo 1',s.legalDates?'INE y fechas adicionales':'Sólo fechas del INE'].join(' · ');
     $('documentFilename').textContent=calendarFilename(s,'pdf');
   }

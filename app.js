@@ -333,11 +333,11 @@
   function exportValues(group) {return [...$('exportForm').querySelectorAll(`[data-export-group="${group}"] input:checked`)].map(input=>input.value);}
   function exportSelection() {
     const selected={entities:new Set(exportValues('entities')),stages:new Set(exportValues('stages')),annexes:new Set(exportValues('annexes')),offices:exportValues('offices')};
-    const onlyMonth=$('exportForm').querySelector('[name="exportPeriod"]:checked')?.value==='month';
+    const period=$('exportForm').querySelector('[name="exportPeriod"]:checked')?.value;const onlyMonth=period==='month',chosenMonths=new Set(exportValues('months'));
     const terms=$('exportQuery').checked?clean(state.query).split(/\s+/).filter(Boolean):[];
     const result=[];
     events.forEach(e=>{
-      if(!selected.stages.has(e.stage)||!selected.annexes.has(stageAnnex(e.stage))||(onlyMonth&&!e.date.startsWith(state.month)))return;
+      if(!selected.stages.has(e.stage)||!selected.annexes.has(stageAnnex(e.stage))||(onlyMonth&&!e.date.startsWith(state.month))||(period==='selected'&&!chosenMonths.has(e.date.slice(0,7))))return;
       const variant=selected.annexes.has('1')?'A':'B';if(e.variants&&!e.variants.includes(variant))return;
       const base=clean([e.kind,e.condition,eventContext(e)].join(' '));
       (e.scopes||[]).forEach(scope=>{
@@ -351,7 +351,7 @@
     return result;
   }
   function clearExportDownloads(){exportObjectURLs.forEach(url=>URL.revokeObjectURL(url));exportObjectURLs=[];$('exportDownloads').hidden=true;$('exportDownloads').innerHTML='';}
-  function updateExportPreview() {exportRevision++;clearExportDownloads();const count=exportSelection().length;$('exportPreview').textContent=`${count.toLocaleString('es-MX')} ${count===1?'entrada':'entradas'} de fecha, actuación, entidad y cargo.`;$('downloadICS').disabled=!count;$('downloadICS').textContent='Preparar .ics';}
+  function updateExportPreview() {$('exportMonthField').hidden=$('exportForm').querySelector('[name="exportPeriod"]:checked')?.value!=='selected';exportRevision++;clearExportDownloads();const count=exportSelection().length;$('exportPreview').textContent=`${count.toLocaleString('es-MX')} ${count===1?'entrada':'entradas'} de fecha, actuación, entidad y cargo.`;$('downloadICS').disabled=!count;$('downloadICS').textContent='Preparar .ics';}
   function exportOptions(id,values,selected) {$(id).innerHTML=values.map(([value,label])=>`<label class="export-option" data-option-text="${escapeHTML(clean(label))}"><input type="checkbox" value="${escapeHTML(value)}" ${selected.has(value)?'checked':''}><span>${escapeHTML(label)}</span></label>`).join('');}
   function openExport() {
     exportOpener=document.activeElement;
@@ -363,7 +363,7 @@
     exportOptions('exportAnnexes',annexes,new Set(state.annexFilter?[state.annexFilter]:annexes.map(v=>v[0]).filter(a=>state.annex||a!=='1')));
     const offices=officeChoices();
     exportOptions('exportOffices',offices.map(o=>[o,o]),new Set(state.office?offices.filter(o=>clean(o)===clean(state.office)):offices));
-    $('exportEntitySearch').value='';$('exportOfficeSearch').value='';$('exportMonthLabel').textContent=monthName(state.month);$('exportForm').querySelector('[name="exportPeriod"][value="all"]').checked=true;
+    $('exportEntitySearch').value='';$('exportOfficeSearch').value='';$('exportMonthLabel').textContent=monthName(state.month);const chosenPeriod=window.calendarDocumentPeriod||{period:'all',months:[]};exportOptions('exportMonths',months.map(m=>[m,monthName(m)]),new Set(chosenPeriod.period==='selected'?chosenPeriod.months:chosenPeriod.period==='month'?[state.month]:months));$('exportForm').querySelector(`[name="exportPeriod"][value="${chosenPeriod.period}"]`).checked=true;
     $('exportQueryLabel').hidden=!state.query;$('exportQuery').checked=!!state.query;$('exportQueryLabel').querySelector('span').textContent=`Aplicar también la búsqueda actual: “${state.query}”`;
     updateExportPreview();$('exportDialog').showModal();
   }
@@ -409,7 +409,7 @@
         current.text+=eventText;current.bytes+=eventBytes;current.count++;current.dates.add(e.date);
       }
       if(current.count)parts.push({...current,text:current.text+footer});
-      if(revision!==exportRevision)return;clearExportDownloads();const files=parts.map((part,index)=>{const blob=new Blob([part.text],{type:'text/calendar;charset=utf-8'});const url=URL.createObjectURL(blob);exportObjectURLs.push(url);return {url,name:calendarFilename({entities:exportValues('entities').length===entities.size?[]:exportValues('entities'),period:$('exportForm').querySelector('[name="exportPeriod"]:checked')?.value||'all',month:state.month,annex:exportValues('annexes').includes('1'),legalDates:$('exportLegalDates').checked},'ics').replace(/\.ics$/,parts.length>1?`_parte_${index+1}_de_${parts.length}.ics`:'.ics'),count:part.count,dates:part.dates.size,bytes:blob.size};});
+      if(revision!==exportRevision)return;clearExportDownloads();const files=parts.map((part,index)=>{const blob=new Blob([part.text],{type:'text/calendar;charset=utf-8'});const url=URL.createObjectURL(blob);exportObjectURLs.push(url);return {url,name:calendarFilename({entities:exportValues('entities').length===entities.size?[]:exportValues('entities'),period:$('exportForm').querySelector('[name="exportPeriod"]:checked')?.value||'all',month:state.month,months:exportValues('months'),annex:exportValues('annexes').includes('1'),legalDates:$('exportLegalDates').checked},'ics').replace(/\.ics$/,parts.length>1?`_parte_${index+1}_de_${parts.length}.ics`:'.ics'),count:part.count,dates:part.dates.size,bytes:blob.size};});
       if(files.length===1){const a=document.createElement('a');a.href=files[0].url;a.download=files[0].name;document.body.append(a);a.click();a.remove();}
       $('exportDownloads').hidden=false;$('exportDownloads').innerHTML=`<h3>${files.length===1?'Archivo preparado':files.length+' partes preparadas'}</h3><p>Importa ${files.length===1?'el archivo':'todas las partes en el mismo calendario'}. Las partes mantienen todas las entradas y sus fuentes.</p>${files.length>1?'<p>Google Calendar admite archivos de hasta 1 MB; cada parte es menor a ese límite. <a href="https://support.google.com/calendar/answer/45654?hl=es" target="_blank" rel="noopener noreferrer">Ayuda de Google Calendar</a></p>':''}<div class="export-part-links">${files.map((file,i)=>`<a class="export-part" href="${file.url}" download="${escapeHTML(file.name)}"><strong>Descargar ${files.length===1?'archivo':'parte '+(i+1)+' de '+files.length}</strong><span>${file.count.toLocaleString('es-MX')} ${file.count===1?'entrada':'entradas'} · ${file.dates} ${file.dates===1?'fecha':'fechas'} · ${Math.ceil(file.bytes/1000)} kB</span></a>`).join('')}</div>`;
       if(files.length>1)$('exportDownloads').scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});showToast(`${selection.length.toLocaleString('es-MX')} ${selection.length===1?'entrada':'entradas'} en ${files.length} ${files.length===1?'archivo':'partes'}.`);
