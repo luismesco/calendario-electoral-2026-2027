@@ -3576,46 +3576,6 @@
           "qualifications": []
         },
         {
-          "entity_code": "SLP",
-          "entity": "San Luis Potosí",
-          "office": "Gubernatura",
-          "election_scope": "Local",
-          "sources": [
-            {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
-              "type": "ine",
-              "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
-              "annex": 1,
-              "pages": [
-                3
-              ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
-              "role": "Periodos y plazos de fiscalización"
-            }
-          ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
-          "qualifications": []
-        },
-        {
           "entity_code": "TLAX",
           "entity": "Tlaxcala",
           "office": "Gubernatura",
@@ -4202,46 +4162,6 @@
         {
           "entity_code": "MICH",
           "entity": "Michoacán",
-          "office": "Gubernatura",
-          "election_scope": "Local",
-          "sources": [
-            {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
-              "type": "ine",
-              "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
-              "annex": 2,
-              "pages": [
-                3
-              ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
-              "role": "Periodos y plazos de fiscalización"
-            }
-          ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
-          "qualifications": []
-        },
-        {
-          "entity_code": "SLP",
-          "entity": "San Luis Potosí",
           "office": "Gubernatura",
           "election_scope": "Local",
           "sources": [
@@ -9796,249 +9716,6 @@
       ]
     },
     {
-      "id": "fecha-c2e8ef41952e9a2a",
-      "date": "2027-01-19",
-      "stage": "OAC",
-      "kind": "Inicio de obtención del apoyo de la ciudadanía",
-      "block": "3",
-      "period": null,
-      "condition": null,
-      "boundary": null,
-      "interval_start": null,
-      "interval_end": null,
-      "variants": [
-        "A"
-      ],
-      "scopes": [
-        {
-          "entity_code": "SLP",
-          "entity": "San Luis Potosí",
-          "office": "Diputaciones locales",
-          "election_scope": "Local",
-          "sources": [
-            {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
-              "type": "ine",
-              "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
-              "annex": 1,
-              "pages": [
-                3
-              ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
-              "role": "Periodos y plazos de fiscalización"
-            }
-          ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
-          "qualifications": []
-        },
-        {
-          "entity_code": "SLP",
-          "entity": "San Luis Potosí",
-          "office": "Presidencias municipales",
-          "election_scope": "Local",
-          "sources": [
-            {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
-              "type": "ine",
-              "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
-              "annex": 1,
-              "pages": [
-                3
-              ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
-              "role": "Periodos y plazos de fiscalización"
-            }
-          ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
-          "qualifications": []
-        }
-      ],
-      "sources": [
-        {
-          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-          "locator": "Páginas 3",
-          "type": "ine",
-          "institution": "Instituto Nacional Electoral",
-          "title": "INE/CG570/2026 · Anexo 1",
-          "agreement": "INE/CG570/2026",
-          "annex": 1,
-          "pages": [
-            3
-          ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
-          "role": "Periodos y plazos de fiscalización"
-        }
-      ]
-    },
-    {
-      "id": "fecha-729173767ee87f29",
-      "date": "2027-01-19",
-      "stage": "PC",
-      "kind": "Inicio de precampaña",
-      "block": "3",
-      "period": null,
-      "condition": null,
-      "boundary": null,
-      "interval_start": null,
-      "interval_end": null,
-      "variants": [
-        "A",
-        "B"
-      ],
-      "scopes": [
-        {
-          "entity_code": "SLP",
-          "entity": "San Luis Potosí",
-          "office": "Diputaciones locales",
-          "election_scope": "Local",
-          "sources": [
-            {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
-              "type": "ine",
-              "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
-              "annex": 2,
-              "pages": [
-                3
-              ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
-              "role": "Periodos y plazos de fiscalización"
-            }
-          ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
-          "qualifications": []
-        },
-        {
-          "entity_code": "SLP",
-          "entity": "San Luis Potosí",
-          "office": "Presidencias municipales",
-          "election_scope": "Local",
-          "sources": [
-            {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
-              "type": "ine",
-              "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
-              "annex": 2,
-              "pages": [
-                3
-              ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
-              "role": "Periodos y plazos de fiscalización"
-            }
-          ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
-          "qualifications": []
-        }
-      ],
-      "sources": [
-        {
-          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-          "locator": "Páginas 3",
-          "type": "ine",
-          "institution": "Instituto Nacional Electoral",
-          "title": "INE/CG570/2026 · Anexo 2",
-          "agreement": "INE/CG570/2026",
-          "annex": 2,
-          "pages": [
-            3
-          ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
-          "role": "Periodos y plazos de fiscalización"
-        }
-      ]
-    },
-    {
       "id": "fecha-a90404d21d621de8",
       "date": "2027-01-21",
       "stage": "OAC",
@@ -11458,6 +11135,90 @@
             }
           ],
           "qualifications": []
+        },
+        {
+          "entity_code": "SLP",
+          "entity": "San Luis Potosí",
+          "office": "Gubernatura",
+          "election_scope": "Local",
+          "sources": [
+            {
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+              "type": "ine",
+              "institution": "Instituto Nacional Electoral",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
+              "annex": 1,
+              "pages": [
+                1
+              ],
+              "captures": [],
+              "role": "Periodos y plazos de fiscalización"
+            }
+          ],
+          "captures": [],
+          "qualifications": [
+            {
+              "literal": "Periodo de 20 días, del 24 de enero al 12 de febrero de 2027."
+            }
+          ]
+        },
+        {
+          "entity_code": "SLP",
+          "entity": "San Luis Potosí",
+          "office": "Diputaciones locales",
+          "election_scope": "Local",
+          "sources": [
+            {
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+              "type": "ine",
+              "institution": "Instituto Nacional Electoral",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
+              "annex": 1,
+              "pages": [
+                1
+              ],
+              "captures": [],
+              "role": "Periodos y plazos de fiscalización"
+            }
+          ],
+          "captures": [],
+          "qualifications": [
+            {
+              "literal": "Periodo de 20 días, del 24 de enero al 12 de febrero de 2027."
+            }
+          ]
+        },
+        {
+          "entity_code": "SLP",
+          "entity": "San Luis Potosí",
+          "office": "Presidencias municipales",
+          "election_scope": "Local",
+          "sources": [
+            {
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+              "type": "ine",
+              "institution": "Instituto Nacional Electoral",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
+              "annex": 1,
+              "pages": [
+                1
+              ],
+              "captures": [],
+              "role": "Periodos y plazos de fiscalización"
+            }
+          ],
+          "captures": [],
+          "qualifications": [
+            {
+              "literal": "Periodo de 20 días, del 24 de enero al 12 de febrero de 2027."
+            }
+          ]
         }
       ],
       "sources": [
@@ -11503,6 +11264,20 @@
               "page": 3
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 1,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -12124,6 +11899,90 @@
             }
           ],
           "qualifications": []
+        },
+        {
+          "entity_code": "SLP",
+          "entity": "San Luis Potosí",
+          "office": "Gubernatura",
+          "election_scope": "Local",
+          "sources": [
+            {
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
+              "type": "ine",
+              "institution": "Instituto Nacional Electoral",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
+              "annex": 2,
+              "pages": [
+                1
+              ],
+              "captures": [],
+              "role": "Periodos y plazos de fiscalización"
+            }
+          ],
+          "captures": [],
+          "qualifications": [
+            {
+              "literal": "Periodo de 20 días, del 24 de enero al 12 de febrero de 2027."
+            }
+          ]
+        },
+        {
+          "entity_code": "SLP",
+          "entity": "San Luis Potosí",
+          "office": "Diputaciones locales",
+          "election_scope": "Local",
+          "sources": [
+            {
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
+              "type": "ine",
+              "institution": "Instituto Nacional Electoral",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
+              "annex": 2,
+              "pages": [
+                1
+              ],
+              "captures": [],
+              "role": "Periodos y plazos de fiscalización"
+            }
+          ],
+          "captures": [],
+          "qualifications": [
+            {
+              "literal": "Periodo de 20 días, del 24 de enero al 12 de febrero de 2027."
+            }
+          ]
+        },
+        {
+          "entity_code": "SLP",
+          "entity": "San Luis Potosí",
+          "office": "Presidencias municipales",
+          "election_scope": "Local",
+          "sources": [
+            {
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
+              "type": "ine",
+              "institution": "Instituto Nacional Electoral",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
+              "annex": 2,
+              "pages": [
+                1
+              ],
+              "captures": [],
+              "role": "Periodos y plazos de fiscalización"
+            }
+          ],
+          "captures": [],
+          "qualifications": [
+            {
+              "literal": "Periodo de 20 días, del 24 de enero al 12 de febrero de 2027."
+            }
+          ]
         }
       ],
       "sources": [
@@ -12191,6 +12050,20 @@
               "page": 4
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Precampaña · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 2,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -16473,37 +16346,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -16513,37 +16370,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -16553,37 +16394,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -17991,6 +17816,20 @@
             }
           ],
           "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 1,
+          "pages": [
+            1
+          ],
+          "captures": [],
+          "role": "Periodos y plazos de fiscalización"
         }
       ]
     },
@@ -19138,37 +18977,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -19178,37 +19001,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -19218,37 +19025,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -20837,6 +20628,20 @@
               "page": 4
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Precampaña · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 2,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -23068,37 +22873,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -23108,37 +22897,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -23148,37 +22921,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -24586,6 +24343,20 @@
             }
           ],
           "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 1,
+          "pages": [
+            1
+          ],
+          "captures": [],
+          "role": "Periodos y plazos de fiscalización"
         }
       ]
     },
@@ -25412,37 +25183,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -25452,37 +25207,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -25492,37 +25231,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -27111,6 +26834,20 @@
               "page": 4
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Precampaña · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 2,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -34121,37 +33858,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -34161,37 +33882,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -34201,37 +33906,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -35639,6 +35328,20 @@
             }
           ],
           "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 1,
+          "pages": [
+            1
+          ],
+          "captures": [],
+          "role": "Periodos y plazos de fiscalización"
         }
       ]
     },
@@ -36465,37 +36168,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -36505,37 +36192,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -36545,37 +36216,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -38164,6 +37819,20 @@
               "page": 4
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Precampaña · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 2,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -40405,37 +40074,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -40445,37 +40098,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -40485,37 +40122,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -41923,6 +41544,20 @@
             }
           ],
           "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 1,
+          "pages": [
+            1
+          ],
+          "captures": [],
+          "role": "Periodos y plazos de fiscalización"
         }
       ]
     },
@@ -42749,37 +42384,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -42789,37 +42408,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -42829,37 +42432,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -44448,6 +44035,20 @@
               "page": 4
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Precampaña · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 2,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -46123,37 +45724,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -46163,37 +45748,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -46203,37 +45772,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -47641,6 +47194,20 @@
             }
           ],
           "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 1,
+          "pages": [
+            1
+          ],
+          "captures": [],
+          "role": "Periodos y plazos de fiscalización"
         }
       ]
     },
@@ -48467,37 +48034,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -48507,37 +48058,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -48547,37 +48082,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -50166,6 +49685,20 @@
               "page": 4
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Precampaña · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 2,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -51355,37 +50888,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -51395,37 +50912,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -51435,37 +50936,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -52873,6 +52358,20 @@
             }
           ],
           "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 1,
+          "pages": [
+            1
+          ],
+          "captures": [],
+          "role": "Periodos y plazos de fiscalización"
         }
       ]
     },
@@ -53699,37 +53198,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -53739,37 +53222,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -53779,37 +53246,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -55398,6 +54849,20 @@
               "page": 4
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Precampaña · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 2,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -56426,37 +55891,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -56466,37 +55915,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -56506,37 +55939,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -57944,6 +57361,20 @@
             }
           ],
           "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 1,
+          "pages": [
+            1
+          ],
+          "captures": [],
+          "role": "Periodos y plazos de fiscalización"
         }
       ]
     },
@@ -58770,37 +58201,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -58810,37 +58225,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -58850,37 +58249,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -60470,6 +59853,20 @@
             }
           ],
           "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Precampaña · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 2,
+          "pages": [
+            1
+          ],
+          "captures": [],
+          "role": "Periodos y plazos de fiscalización"
         }
       ]
     },
@@ -61336,37 +60733,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -61376,37 +60757,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -61416,37 +60781,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 1",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 1,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a1-p3",
-                  "title": "Anexo 1, página 3",
-                  "url": "data/evidence/ine-a1-p3.json",
-                  "annex": 1,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a1-p3",
-              "title": "Anexo 1, página 3",
-              "url": "data/evidence/ine-a1-p3.json",
-              "annex": 1,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -62853,6 +62202,20 @@
               "page": 3
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Obtención del apoyo de la ciudadanía · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 1,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -63841,37 +63204,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -63881,37 +63228,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -63921,37 +63252,21 @@
           "election_scope": "Local",
           "sources": [
             {
-              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5-a.zip",
-              "locator": "Páginas 3",
+              "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+              "locator": "Página 1 · Precampaña · Bloque 3",
               "type": "ine",
               "institution": "Instituto Nacional Electoral",
-              "title": "INE/CG570/2026 · Anexo 2",
-              "agreement": "INE/CG570/2026",
+              "title": "CF/005/2026 · Anexo único",
+              "agreement": "CF/005/2026",
               "annex": 2,
               "pages": [
-                3
+                1
               ],
-              "captures": [
-                {
-                  "id": "ine-a2-p3",
-                  "title": "Anexo 2, página 3",
-                  "url": "data/evidence/ine-a2-p3.json",
-                  "annex": 2,
-                  "page": 3
-                }
-              ],
+              "captures": [],
               "role": "Periodos y plazos de fiscalización"
             }
           ],
-          "captures": [
-            {
-              "id": "ine-a2-p3",
-              "title": "Anexo 2, página 3",
-              "url": "data/evidence/ine-a2-p3.json",
-              "annex": 2,
-              "page": 3
-            }
-          ],
+          "captures": [],
           "qualifications": []
         },
         {
@@ -65540,6 +64855,20 @@
               "page": 4
             }
           ],
+          "role": "Periodos y plazos de fiscalización"
+        },
+        {
+          "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/191002/cf-11se-2026-11-10-p3-a1.pdf",
+          "locator": "Página 1 · Precampaña · Bloque 3",
+          "type": "ine",
+          "institution": "Instituto Nacional Electoral",
+          "title": "CF/005/2026 · Anexo único",
+          "agreement": "CF/005/2026",
+          "annex": 2,
+          "pages": [
+            1
+          ],
+          "captures": [],
           "role": "Periodos y plazos de fiscalización"
         }
       ]
@@ -129651,21 +128980,21 @@
           "offices": [
             {
               "office": "Gubernatura",
-              "start": "2027-01-04",
+              "start": "2027-01-24",
               "end": "2027-02-12",
-              "duration_days": 40
+              "duration_days": 20
             },
             {
               "office": "Diputaciones locales",
-              "start": "2027-01-19",
+              "start": "2027-01-24",
               "end": "2027-02-12",
-              "duration_days": 25
+              "duration_days": 20
             },
             {
               "office": "Presidencias municipales",
-              "start": "2027-01-19",
+              "start": "2027-01-24",
               "end": "2027-02-12",
-              "duration_days": 25
+              "duration_days": 20
             }
           ]
         },
@@ -130482,21 +129811,21 @@
           "offices": [
             {
               "office": "Gubernatura",
-              "start": "2027-01-04",
+              "start": "2027-01-24",
               "end": "2027-02-12",
-              "duration_days": 40
+              "duration_days": 20
             },
             {
               "office": "Diputaciones locales",
-              "start": "2027-01-19",
+              "start": "2027-01-24",
               "end": "2027-02-12",
-              "duration_days": 25
+              "duration_days": 20
             },
             {
               "office": "Presidencias municipales",
-              "start": "2027-01-19",
+              "start": "2027-01-24",
               "end": "2027-02-12",
-              "duration_days": 25
+              "duration_days": 20
             }
           ]
         },
@@ -130702,6 +130031,15 @@
         "text": "Periodos de precampaña y campaña y plazos de su fiscalización. La variante con anexo 1 incluye también la obtención del apoyo de la ciudadanía y su fiscalización.",
         "url": "https://repositoriodocumental.ine.mx/xmlui/bitstream/handle/123456789/190374/CGex202609-29-ap-5.pdf",
         "locator": "Acuerdo y anexos 1, 2 y 3.",
+        "type": "ine",
+        "institution": "Instituto Nacional Electoral"
+      },
+      {
+        "id": "INE-CF005-2026",
+        "title": "CF/005/2026 · San Luis Potosí",
+        "text": "Ajuste al inicio de la obtención del apoyo de la ciudadanía y de la precampaña para gubernatura, diputaciones locales y ayuntamientos.",
+        "url": "https://repositoriodocumental.ine.mx/xmlui/handle/123456789/191002",
+        "locator": "Punto primero y anexo único.",
         "type": "ine",
         "institution": "Instituto Nacional Electoral"
       },
